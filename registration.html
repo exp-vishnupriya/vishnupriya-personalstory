@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Registration</title>
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="jquery/jquery-ui.min.css">
+	<script src="jquery/jquery-ui.min.js"></script>
+	<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>
+	<link rel="stylesheet" href="j.css">
+
+	<script src="test.js"></script>
+
+</head>
+
+<body>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-2">
+			</div>
+			<div class="col-sm-10">
+				<form id="myform">
+					<div>
+						<div class="row">
+							<div class="col-sm-2">
+
+
+								<input type="file" name="datafile" id="image" onchange="imagechange()"size="40">
+								<div id="imgTest"></div>
+
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-2">
+								<label style="margin-top : 20px;" for="first">FIRST NAME</label>
+							</div>
+							<div class="col-sm-3">
+								<input style="margin-top : 20px;" id="first1" type="text" name="id" placeholder="FIRST NAME" required>
+								<label id="alert8" for="alert8" hidden="true">Field required..</label>
+							</div>
+						</div>
+						<div>
+							<div class="row">
+								<div class="col-sm-2">
+									<label style="margin-top : 20px;">LAST NAME</label>
+								</div>
+								<div class="col-sm-3">
+									<input style="margin-top : 20px;" id="last" type="text" placeholder="LAST NAME" name="name" required>
+									<label id="alert9" for="alert9" hidden="true">Field required..</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-2">
+									<label style="margin-top : 20px;">EMAIL</label>
+								</div>
+								<div class="col-sm-3">
+									<input style="margin-top : 20px;" id="email" type="text" placeholder="EMAIL" name="name" required>
+
+									<label id="alert1" for="alert1" hidden="true">Field required..</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-2">
+									<label style="margin-top : 20px;">PHONE NUMBER</label>
+								</div>
+								<div class="col-sm-5">
+									<label style="margin-top : 20px;">+91</label>
+									<input style="margin-top : 20px;" id="phone" type="text" placeholder="PHONNE NUMBER" name="name" required>
+									<label id="alert2" for="alert2" hidden="true">Field required..</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-2">
+									<label style="margin-top : 20px;">GENDER</label>
+								</div>
+								<div class="col-sm-3">
+									<input style="margin-top : 20px;" id="gender" type="radio" name="gender" value="male" checked> Male
+									<input type="radio" name="gender" value="female"> Female
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-2">
+									<label style="margin-top : 20px;">DOB</label>
+								</div>
+								<div class="col-sm-3">
+									<input style="margin-top : 20px;" readonly="readonly" type="text" placeholder="DOB" id="datepicker-1" required>
+									<label id="alert10" for="alert10" hidden="true">Field required..</label>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-2">
+								<label style="margin-top : 20px;">MARITAL STATUS</label>
+							</div>
+							<div class="col-sm-3">
+								<select style="margin-top : 20px;" id="marital" name="department" onchange="myFunction(marital)">
+                            <option>SELECT</option>
+                            <option>SINGLE</optionn>
+                            <option>MARRIED</option>
+                            </select>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-sm-2">
+								<label style="margin-top : 20px;">FATHER'S NAME</label>
+							</div>
+							<div class="col-sm-3">
+								<input style="margin-top : 20px;" id="father" type="text" placeholder="FATHER'S NAME" name="name" required>
+								<label id="alert3" for="alert3" hidden="true">Field required..</label>
+							</div>
+						</div>
+
+						<div>
+							<div class="row">
+								<div class="col-sm-2">
+									<label style="margin-top : 20px;">MOTHER'S NAME</label>
+								</div>
+								<div class="col-sm-3">
+									<input style="margin-top : 20px;" id="mother" type="text" placeholder="MOTHER'S NAME" name="name" required>
+									<label id="alert4" for="alert4" hidden="true">Field required..</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-2">
+									<label style="margin-top : 20px;">SPOUSE'S NAME</label>
+								</div>
+								<div class="col-sm-3">
+									<input style="margin-top : 20px;" id="spouse" type="text" placeholder="SPOUSE'S NAME" name="name">
+									<label id="alert5" for="alert5" hidden="true">Field required..</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-2">
+									<label style="margin-top : 20px;">COMPANY</label>
+								</div>
+								<div class="col-sm-3">
+									<input style="margin-top : 20px;" id="company" type="text" placeholder="COMPANY" name="name" required>
+									<label id="alert6" for="alert6" hidden="true">Field required..</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-2">
+									<label style="margin-top : 20px;">DESIGNATION</label>
+								</div>
+								<div class="col-sm-3">
+									<input style="margin-top : 20px;" id="desi" type="text" placeholder="DESIGNATION" name="name" required>
+									<label id="alert7" for="alert7" hidden="true">Field required..</label>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-sm-3">
+
+								</div class="col-sm-8">
+
+								<button style="margin-top: 20px;" type="button" id="click">SUBMIT</button>
+								<button style="margin-top : 20px;" type="reset" onclick="fieldHide()">RESET</button>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

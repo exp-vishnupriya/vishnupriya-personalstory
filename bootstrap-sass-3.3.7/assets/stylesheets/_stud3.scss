@@ -1,0 +1,18 @@
+$bgcolor : green;
+$bgcolor1 : white;
+@mixin border($radius) {
+   word-spacing: $radius;}
+.spacing{ @include border(30px); }
+#Heading
+{
+    color : $bgcolor;
+text-align: center;
+}
+.margin
+{
+
+margin-bottom: 50px;
+}
+.Bgcolor
+{background-color:$bgcolor;
+}
